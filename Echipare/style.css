@@ -1,0 +1,146 @@
+body{
+    
+    font-family: urbanist;
+    margin: 0%;
+}
+@font-face {
+    font-family: urbanist;
+    src: url(../Resurse/Font/Urbanist-VariableFont_wght.ttf);
+  }
+
+
+.main{
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+}
+
+.meniu{
+    display: grid;
+    grid-template-columns: 3em 10em auto 8em 11em 3em;
+    padding-top: 1.5em;
+}
+.meniu div{
+    font-weight: 500;
+    font-size: 2em;
+    text-align: center;
+}
+
+.render{
+    height: 22em;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80em;
+}
+
+.echipari{
+
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 5em;
+    justify-content: center;
+}
+.echipari .item{
+    width: 28em;
+    height: 22em;
+    margin-bottom: 1em;
+
+    display: flex;
+    flex-direction: column;
+    background-color: #f1f2f6;
+    text-align: center;
+
+}
+.item > .nume{
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-size: 1.7em;
+}
+.item > .descriere{
+
+    overflow: auto;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+    padding-bottom: 1em;
+
+}
+.item > .pret{
+    font-size: 1.5em;
+    padding-top: 0.4em;
+    padding-bottom: 0.4em;
+    background-color: #218c74;
+}
+
+.item > .pret:hover{
+
+    color: rgba(0, 0, 0, 0.767);
+    background-color: #218c75d7;
+
+}
+
+.bar{
+    display: grid;
+    grid-template-columns: auto auto;
+    padding-left: 3em;
+    padding-top: 5em;
+
+
+}
+
+.inapoi{
+
+    font-size: 1.7em;
+    padding-top: 0.3em;
+    padding-bottom: 0.3em;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+    width: fit-content;   
+    background-color: #218c74;
+
+}
+
+.inapoi:hover{
+
+    color: rgba(0, 0, 0, 0.767);
+    background-color: #218c75d7;
+
+}
+
+#page-mask {
+    background: rgba(0, 0, 0, 0.308);
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    display: none;
+    
+}
+
+.popup{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+
+    width: 35em;
+    height: 25em;
+    background-color: rgb(235, 234, 228);
+
+    font-size: 1.4em;
+    text-align: center;
+    overflow: auto;
+    
+    display: none;
+    
+
+}
+
+.popup > .close{
+    float: right;
+}

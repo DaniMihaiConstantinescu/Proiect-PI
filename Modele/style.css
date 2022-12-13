@@ -1,0 +1,103 @@
+body{
+    
+    font-family: urbanist;
+    margin: 0%;
+}
+
+
+.main{
+
+    
+    display: grid;
+    grid-template-rows: auto 2em auto 2em;
+
+}
+
+/*
+.main div{
+    border: 1px solid black;
+}
+*/
+
+.meniu{
+    display: grid;
+    grid-template-columns: 3em 10em auto 8em 11em 3em;
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+}
+.meniu div{
+    font-weight: 500;
+    font-size: 2em;
+    text-align: center;
+}
+
+.modele{
+
+    display: grid;
+    grid-template-columns: auto auto auto ;
+    column-gap: 7em;
+    row-gap: 4em;
+
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+
+}
+
+.item{
+    text-align: center;
+    width: 30em;
+    height: 21em;
+
+    background-color: #f5f6fa;
+
+    display: flex;
+    flex-direction: column;
+    
+    
+
+}
+
+
+.item .imagine{
+    flex: 1 1 auto;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-top: 15px;
+
+    width: 100%;
+
+
+}
+.item .descriere{
+
+    font-size: 1.3em;
+    padding-bottom: 1.0em;
+    padding-top: 1em;
+
+
+}
+.item .alege{
+
+    height: 2.5em;
+    
+    font-weight: 1000;
+    font-size: 1.2em;
+    padding-top: 0.7em;
+
+    background-color: #7f8fa6;
+
+}
+.item .alege:hover{
+
+    color: rgba(0, 0, 0, 0.767);
+    background-color: #7f8fa6b9;
+
+}
+
+
+
+@font-face {
+    font-family: urbanist;
+    src: url(../Resurse/Font/Urbanist-VariableFont_wght.ttf);
+  }
