@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sumar</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        
+    </head>
+    <body>
+    
+        <div class="main">
+    
+            <div class="meniu">
+                <div></div>
+                <div onclick="location.href='../Homepage/loader.php'">Homepage</div>
+                <div></div>
+                <div>Dealeri</div>
+                <div>Despre noi</div>
+                <div></div>
+            </div>
+    
+            <div class="denumire"><u>Porsche 911</u></div>
+    
+            <model-viewer class="render" src="../Resurse/3D Models/Porsche/roz.glb" camera-controls></model-viewer>
+    
+            <div class="detalii">
+    
+                <div class="denumire" style="font-size: 1.6em;"><u>Detalii Configurare</u></div>
+    
+                <div class="item">
+                    <div class="info1">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                          </svg>
+                    </div>
+                    <div class="nume">Echipare: Turbo S </div>
+                    <div class="pret">+110000$</div>
+                </div>
+    
+                <div class="item">
+                    <div class="info2">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <circle cx="12" cy="12" r="9" />
+                            <line x1="12" y1="8" x2="12.01" y2="8" />
+                            <polyline points="11 12 12 12 12 16 13 16" />
+                          </svg>
+                    </div>
+                    <div class="nume">Motorizare: 3.0 Turbo</div>
+                    <div class="pret">+3000$</div>
+                </div>
+                <div class="item">
+                    <div class="imag" style="background-color: #A72241;"> </div>
+                    <div class="nume">Culoare: Red Metallic</div>
+                    <div class="pret">+11000$</div>
+                </div>
+            </div>
+    
+            <div class="detalii">
+                <div class="denumire" style="font-size: 1.6em;"><u>Optiuni Alese</u></div>
+    <div class="item">
+                <div class="nume">Geamuri Fumurii </div>
+                <div class="pret">Inclusa</div>
+            </div><div class="item">
+                <div class="nume">Evacuare Sport </div>
+                <div class="pret">Inclusa</div>
+            </div><div class="item">
+                <div class="nume">Interior Piele </div>
+                <div class="pret">Inclusa</div>
+            </div><div class="item">
+                <div class="nume">Suspensie Sport</div>
+                <div class="pret">+3200$</div>
+            </div></div>
+
+    <div class="total"> Total: 127200$ </div>
+
+    <div class="link">
+
+            Link Configuratie:
+            <input id="url" type="text" value="http://localhost/Sumar/reload.php?id=4&echipare=2&motorizare=3&culoare=7&optiuni=1,2,3,4" readonly>
+            <div id="copy">Copiati</div>
+
+        </div>
+
+    <div class="programare" onclick="location.href='../Programare/loader.php'">Programati o intalnire cu un dealer</div>
+
+    
+    <div id="page-mask"></div>
+    <div class="popup1 popup">
+        <svg class="close1 close" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x"
+            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <path d="M10 10l4 4m0 -4l-4 4" />
+        </svg>
+        <br><br><br>
+        <u>Dotari Incluse</u>
+        <br><br><br>
+        Geamuri Fumurii<br>Evacuare Sport<br>Interior Piele<br>
+    </div>
+    <div class="popup2 popup">
+        <svg class="close2 close" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-square-x"
+            width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#000000" fill="none"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <rect x="4" y="4" width="16" height="16" rx="2" />
+            <path d="M10 10l4 4m0 -4l-4 4" />
+        </svg>
+        <br><br><br>        
+        <u>Detalii tehnice</u>
+        <br><br><br>
+        
+            <b> HP </b> <br>
+            265        
+            <br> <b> Cuplu </b> <br>
+            343        
+            <br> <b> Consum </b> <br>
+            12.7        
+            <br> <b> Transmisie </b> <br>
+            Manuala        
+            <br> <b> Capacitate </b> <br>
+            2993        
+            <br> <b> Combustibil </b> <br>
+            Benzina<br>
+
+
+</body>
+
+<script>
+
+$(document).ready(function () {
+    $(".info1").click(function () {
+
+        $("#page-mask").fadeIn();
+        $(".popup1").fadeIn();
+
+    });
+    $(".close1").click(function () {
+
+        $("#page-mask").fadeOut();
+        $(".popup1").fadeOut();
+
+    });
+
+
+    $(".info2").click(function () {
+
+        $("#page-mask").fadeIn();
+        $(".popup2").fadeIn();
+
+    });
+    $(".close2").click(function () {
+
+        $("#page-mask").fadeOut();
+        $(".popup2").fadeOut();
+
+    });
+
+    $("#copy").click(function () {
+
+        navigator.clipboard.writeText($("#url").val());
+
+    });
+
+});
+
+</script>
+
+</html>
