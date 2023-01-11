@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Culoare</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+    
+        <div class="main">
+    
+            <div class="meniu">
+                <div></div>
+                <div onclick="location.href='../Homepage/loader.php'">Homepage</div>
+                <div></div>
+                <div>Dealeri</div>
+                <div>Despre noi</div>
+                <div></div>
+            </div>
+    
+            <model-viewer class="render" src = "../Resurse/3D Models/Porsche/roz.glb" camera-controls > </model-viewer>
+            
+            <div class="echipari">
+    <div class="item" id="6" onclick="apasa(this.id);">
+        <div class="imag" style="background-color: #201A1E;"> </div>
+        <div class="nume">Jet Black</div>
+        <div class="pret">Inclus</div>
+    </div><div class="item" id="7" onclick="apasa(this.id);">
+        <div class="imag" style="background-color: #A72241;"> </div>
+        <div class="nume">Red Metallic</div>
+        <div class="pret">+11000$</div>
+    </div><div class="item" id="8" onclick="apasa(this.id);">
+        <div class="imag" style="background-color: #328983;"> </div>
+        <div class="nume">Emerald Green</div>
+        <div class="pret">+13600$</div>
+    </div><div class="item" id="9" onclick="apasa(this.id);">
+        <div class="imag" style="background-color: #A5A4AC;"> </div>
+        <div class="nume">Chalk</div>
+        <div class="pret">+12000$</div>
+    </div><div class="item" id="10" onclick="apasa(this.id);">
+        <div class="imag" style="background-color: #C9AC80;"> </div>
+        <div class="nume">Sand Beige</div>
+        <div class="pret">+9000$</div>
+    </div></div>
+
+    <div class="bar">
+            <div class="inapoi">Inapoi</div>
+            <div style="font-size: 2em;">Total: 124000$</div>
+            <div class="inainte" onclick="trimite(this.id);">Inainte</div>
+        </div>
+
+
+</div>
+
+<form method="post" action="../Optiuni/loader.php">
+    <button id="fin" style="display:none"  ></button>
+    <input value="7" type="text" name="id" id="cod" style="display: none;">
+</form>
+
+<form method="post" action="../Culoare/reload.php">
+        <button id="rel" style="display:none"  ></button>
+        <input value="0" type="text" name="id" id="culoare" style="display: none;">
+</form>
+
+</body>
+
+<script>
+
+    function apasa(but_id){
+
+        $("#culoare").attr("value",but_id);
+        $("#rel").click();
+
+    }
+
+    function trimite(){
+
+        $("#fin").click();
+
+    }
+
+</script>
+
+</html>

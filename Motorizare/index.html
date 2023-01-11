@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Motorizare</title>
+        <link rel="stylesheet" href="style.css">
+        <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+    
+        <div class="main">
+    
+            <div class="meniu">
+                <div></div>
+                <div onclick="location.href='../Homepage/loader.php'">Homepage</div>
+                <div></div>
+                <div>Dealeri</div>
+                <div>Despre noi</div>
+                <div></div>
+            </div>
+    
+            <model-viewer class="render" src = "../Resurse/3D Models/porsche.glb" camera-controls > </model-viewer>
+            
+            <div class="echipari">
+    <div class="item">
+        <div class="nume"><u>3.0 Boxter N/A</u></div>
+        <div class="descriere">
+            
+            <b> HP </b> <br>
+            210        
+            <br> <b> Cuplu </b> <br>
+            270        
+            <br> <b> Consum </b> <br>
+            16.4        
+            <br> <b> Transmisie </b> <br>
+            Manuala        
+            <br> <b> Capacitate </b> <br>
+            2993        
+            <br> <b> Combustibil </b> <br>
+            Benzina<br>
+        </div>
+        <div class="pret" id="1" onclick="apasa(this.id);">+0$</div>
+    </div><div class="item">
+        <div class="nume"><u>3.0 Turbo</u></div>
+        <div class="descriere">
+            
+            <b> HP </b> <br>
+            265        
+            <br> <b> Cuplu </b> <br>
+            343        
+            <br> <b> Consum </b> <br>
+            12.7        
+            <br> <b> Transmisie </b> <br>
+            Manuala        
+            <br> <b> Capacitate </b> <br>
+            2993        
+            <br> <b> Combustibil </b> <br>
+            Benzina<br>
+        </div>
+        <div class="pret" id="3" onclick="apasa(this.id);">+3000$</div>
+    </div><div class="item">
+        <div class="nume"><u>3.3 Turbo S </u></div>
+        <div class="descriere">
+            
+            <b> HP </b> <br>
+            330        
+            <br> <b> Cuplu </b> <br>
+            467        
+            <br> <b> Consum </b> <br>
+            16.2        
+            <br> <b> Transmisie </b> <br>
+            Manuala        
+            <br> <b> Capacitate </b> <br>
+            3297        
+            <br> <b> Combustibil </b> <br>
+            Benzina<br>
+        </div>
+        <div class="pret" id="5" onclick="apasa(this.id);">+6500$</div>
+    </div></div>
+
+    <div class="bar">
+        <form id="fInapoi" action="../Echipare/loader.php" method="post">
+            <div class="inapoi">Inapoi</div>
+            <input style="display:none" type="text" name="id" value=" 4 ">
+        </form>
+    </div>
+
+
+</div>
+
+<form method="post" action="../Culoare/loader.php">
+    <button id="fin" style="display:none"  ></button>
+    <input value="0" type="text" name="id" id="cod" style="display: none;">
+</form>
+
+</body>
+
+<script>
+
+    function apasa(but_id){
+
+        $("#cod").attr("value",but_id);
+        $("#fin").click();
+
+    }
+
+    $(".inapoi").click(function () {
+
+        $("#fInapoi").submit();
+
+    });
+
+</script>
+
+</html>

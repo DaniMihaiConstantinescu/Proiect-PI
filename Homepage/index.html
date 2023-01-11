@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+        <title>Homepage</title>
+        <link rel="stylesheet" href="style.css">
+    
+    </head>
+    <body>
+    
+        <div class="main">
+    
+            <div class="meniu">
+                <div></div>
+                <div>Homepage</div>
+                <div></div>
+                <div onclick="location.href='../Dealeri/loader.php'">Dealeri</div>
+                <div>Despre noi</div>
+                <div></div>
+            </div>
+    
+            <div class="slider">
+                <img class="promotie" src='../Resurse/Promotii/6.png',
+alt="">
+            </div>
+    
+            <div></div>
+    
+            <form action="../Modele/loader.php">
+                <div class="config" >
+                    <div class="buton">Configureaza</div>
+                    <button style="display:none;" ></button>
+                </div>
+            </form>
+    
+    
+        </div>
+        
+    </body>
+    
+    <script>
+    
+        let image_array = ['../Resurse/Promotii/6.png',
+'../Resurse/Promotii/7.png',
+];
+
+    let pic = $('.slider');
+
+    let i = 0;
+    setInterval(function() {
+
+        i = (i + 1) % image_array.length;
+        $(document).ready(function(){
+            pic.fadeOut(1000, () => {
+                $('.promotie').attr("src", image_array[i]);
+                pic.fadeIn(1000);
+            });
+        });
+
+    }, 10000);
+    
+    $(document).ready(function(){
+        $(".buton").click(function(){
+            $('button').click();
+        })
+    });
+
+</script>
+
+</html>
